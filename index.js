@@ -40,9 +40,12 @@ function addNumbers(num1, num2) {
  * }
 */
 function makePersonObject(id, name, email) {
-  this.id = id,
-  this.name = name,
-  this.email = email;
+  const personObject = {
+    id: id,
+    name: name,
+    email: email,
+  }
+  return personObject
 }
 
 /**
@@ -184,7 +187,7 @@ function getCarInfoById(inventory, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  inventory.sort(car_model);
+  return inventory[inventory.sort(expo.car_model)];
 }
 
 /**
