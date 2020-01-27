@@ -79,8 +79,17 @@ function getName(object) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const smartPerson = {
+    name: name,
+    sum: function (num1, num2) {
+      return num1 + num2;
+    },
+    speak() {
+      return `Hello, my name is ${name}`;
+    }
+    }
+    return smartPerson;
 }
 
 
@@ -188,7 +197,7 @@ function getCarInfoById(inventory, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  return inventory[inventory.sort(expo.car_model)];
+  
 }
 
 /**
@@ -200,8 +209,8 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  
 }
 
 /**
@@ -216,7 +225,7 @@ function getModelYears(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, maxYear) {
   /* code here */
 }
 
@@ -231,7 +240,7 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
 }
 
