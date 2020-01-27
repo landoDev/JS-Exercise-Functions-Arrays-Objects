@@ -243,9 +243,15 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(inventory, maxYear) {
-  /* code here */
+function getOlderCars(inventory, carYear) {
+  const carInventory = inventory;
+  const yearFilter = carInventory.filter(function (inventory){
+    return inventory.car_year <= carYear;
+  })
+  return yearFilter;
 }
+
+  
 
 /**
  * ### Challenge `getGermanCars`
@@ -259,7 +265,12 @@ function getOlderCars(inventory, maxYear) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  /* code here */
+  const germanCars = ["Audi", "Mercedes-Benz", "Volkswagen", "BMW"]
+  const germanFilter= [];
+  if(inventory.car_model == germanCars[i]){
+    return true;
+  }
+  return germanFilter;
 }
 
 /**
