@@ -183,8 +183,8 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory() {
-  /* code here */
+function sortCarInventory(inventory) {
+  inventory.sort(car_model);
 }
 
 /**
@@ -249,9 +249,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  return a + b;
+} // code here!
+const addFive = (num) => {
+  return num + 5;
+}; // code here!
+const argTimesTwo = (num) => {
+  return num * 2;
+}; // code here!
 
 /**
  * ### Challenge `carMaker`
